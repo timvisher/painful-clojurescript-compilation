@@ -7,6 +7,9 @@
                  [org.clojure/clojurescript "0.0-1934"]]
   :profiles {:dev {:plugins [[lein-cljsbuild "0.3.4"]]
                    :cljsbuild {:builds [{:source-paths ["src"]
+                                         :compiler {:output-to     "painful-clojurescript-compilation-none.js"
+                                                    :optimizations :none}}
+                                        {:source-paths ["src"]
                                          :compiler {:output-to     "painful-clojurescript-compilation-whitespace.js"
                                                     :optimizations :whitespace}}
                                         {:source-paths ["src"]
